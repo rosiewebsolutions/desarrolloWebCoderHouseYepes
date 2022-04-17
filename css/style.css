@@ -1,0 +1,207 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+h1{
+    font-family: 'Cedarville Cursive', cursive;
+}
+/*Reseteo CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*Disenio HEADER*/
+header{
+    display: flex;
+     background-color: #f7d610;
+     justify-content: center;
+     height: 200px; 
+     width: 100%;
+    position: sticky;
+    }
+/*Disenio MENU DE NAVEGACION/
+/*Para que el Content no pise el Menu*/
+nav .clearfix{
+    clear: both;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    }
+nav ul li{
+    display: flex;
+    list-style-type: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.25rem 0.25rem lightgray;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    }
+    /*Colores Botones Nav*/
+    /*Nota: la unica manera que encontre de que no se vea el subrayado y cambiar el color del texto fue aplicandolo directamente a la id, por eso esta repetido el estilo*/
+    #purple{
+        background-color: blueviolet;
+        text-decoration: none;
+        color: rgb(45, 44, 44);
+    }
+    #blue{
+        background-color: aqua;
+        text-decoration: none;
+        color: rgb(45, 44, 44);
+    }
+    #yellow{
+        background-color: yellow;
+        text-decoration: none;
+        color: rgb(45, 44, 44);
+    }
+    #orange{
+        background-color: orange;
+        text-decoration: none;
+        color: rgb(45, 44, 44);
+    }
+    #red{
+        background-color: red;
+        text-decoration: none;
+        color: rgb(45, 44, 44);
+    }
+/*Menu Hamburguesa*/ 
+nav .nav__burgerMenu{
+    display: flex;
+    justify-content: center;
+    }
+
+  /*Disenio CONTENIDOS de cada pagina*/
+  /*Contenido HOME*/
+  main{
+      height: 400px;
+      width:100%;
+      text-align: center;
+      overflow: auto;
+  }
+  .Foto{
+      height: 400px;
+      width: auto;
+  } 
+  /*Contenido MENU*/
+  .nuestroMenu{
+      display: block;
+      align-items: center;
+      text-align: center;
+      overflow: auto;
+  }
+  /*Contenido CONTACTO*/
+    .Formulario{
+        margin-left: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 400px;
+        overflow: auto;
+    }
+  /*Contenido DONDE ESTAMOS*/
+    .DondeEstamos{
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        height: 400px;
+        width: 100%; 
+        text-align: center; 
+        align-items: center; 
+        overflow: auto;
+    }
+    /*Contenido MENU*/
+    .nuestromenu{
+        display: flex;
+        margin: 1rem;
+        padding: 1rem;
+        height: 400px;
+        width: 100%; 
+        text-align: center;  
+        overflow: auto;
+    }
+   /*Contenido SOBRE NOSOTROS*/
+   .SobreNosotros{
+    margin-left: 20px;
+    height: 400px;
+   }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+   }
+   .fotoRosie{
+       border-radius: 50%;
+   }
+   /*Disenio FOOTER*/
+   footer{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-size-adjust: 1.5rem;
+    text-shadow: 0.5rem grey;
+            }
+   /*Orden Iconos Font Awesome*/
+   footer div{
+    float: center;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 2rem;
+    }
+    /*Entrega 9/4/22 - Entregable*/
+    /*GRIDS*/ 
+    header{
+        grid-area: cabecera;
+    }
+    nav{
+        grid-area: menuNavegacion;
+    }
+    main{
+        grid-area: contenido;
+    }
+    footer{
+        grid-area: pieDePagina;
+    }
+    body{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2 ,200px) 400px 100px;
+        grid-template-areas: 
+        "cabecera"
+        "menuNavegacion"
+        "contenido"
+        "pieDePagina";
+        }
+   /*Entregqa 9/4/22 - Complementario*/
+    /*RESPONSIVE*/
+    /*Media Queries*/
+    /*Mobile*/
+    /*Mobile First- Seteado en el Codigo CCS*/
+    /*Desktop*/
+    /*MENU*/
+    @media screen and (min-width: 768px){
+        .nav__burgerMenu{
+            visibility: hidden;
+            }
+        nav ul li{
+                list-style-type: none;
+                margin: 0.5rem;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                box-shadow: 0.5rem 0.25rem 0.25rem lightgray;
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                }
+        body{
+                display: grid;
+                grid-template-columns: none;
+                grid-template-rows: 200px 100px 450px 100px;
+                grid-template-areas: 
+                "cabecera"
+                "menuNavegacion"
+                "contenido"
+                "pieDePagina";
+                    }
+            }
+        
